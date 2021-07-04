@@ -1,4 +1,7 @@
 buy = '按E打開購買選單'
+x = 1568.17
+y = 3685.29
+z = 33.44
 
 ESX = nil TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)  --Get ESX
 
@@ -21,7 +24,7 @@ Citizen.CreateThread(function()
 		
 		local coords = GetEntityCoords(GetPlayerPed(-1))
 		
-		if(GetDistanceBetweenCoords(coords, 1568.17, 3685.29, 33.44, true) < 1.75) then
+		if(GetDistanceBetweenCoords(coords, x, y, z, true) < 1.75) then
 			alert(buy)
 
 			if IsControlJustReleased(1, 38) then
